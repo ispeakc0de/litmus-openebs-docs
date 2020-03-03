@@ -10,8 +10,7 @@ services:
 script:
   - python tag.py
   - cd website
-  - npm run build
+  - npm run build 
   - cd ..
-  - 
 after_success:
-  docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t shubh214/litmus-openebs-docs:1.1.17 . && docker push shubh214/litmus-openebs-docs:1.1.17; 
+  docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t shubh214/litmus-openebs-docs:1.1.18 . && docker push shubh214/litmus-openebs-docs:1.1.18; 
